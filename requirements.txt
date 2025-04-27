@@ -1,0 +1,22 @@
+# Core ML/NLP Libraries
+torch --index-url https://download.pytorch.org/whl/cpu # Or specific CUDA version
+transformers>=4.30.0 # Use a recent version compatible with PEFT/QLoRA
+datasets>=2.10.0
+accelerate>=0.21.0 # Required for efficient training
+
+# PEFT Libraries
+peft>=0.5.0 # For LoRA/QLoRA support
+bitsandbytes>=0.41.0 # For 4-bit quantization (QLoRA) - Linux/CUDA often required
+
+# Utilities
+tqdm # Progress bars
+fire # Command-line interface helper
+
+# Optional for Evaluation/Metrics (if using text generation metrics)
+# rouge_score
+# bert_score
+# nltk # Often needed for tokenization in metrics
+
+# Note: Installation of bitsandbytes might require specific CUDA versions
+# and may be easier on Linux environments. Check their documentation.
+# Ensure PyTorch is installed correctly for your hardware (CPU/GPU).
